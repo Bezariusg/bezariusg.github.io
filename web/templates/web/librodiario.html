@@ -1,0 +1,53 @@
+{% extends 'web/base.html' %}
+
+
+{% block contenido %}
+
+<main class="main">
+<div class="contenedor">
+
+<table class="tabla_asiento" style="width:50%">
+  <tr class="cabecera_tabla">
+      <th>ID</th>
+      <th>FECHA</th>
+      <th>ID CUENTA</th>
+      <th>CUENTA QUE INTERVIENE</th>
+      <th>DEBE</th>
+      <th>HABER</th>
+  </tr>
+
+        {% for obj in response %}
+        <tr class="contenido_tabla">
+            <td>{{ obj.id }}</td>
+            <td>{{ obj.fecha }}</td>
+            <td>{{ obj.id_transaccion }} </td>
+            <td>{{ obj.nombre_transaccion }} </td>
+            <td>{{ obj.debe }} </td>
+            <td>{{ obj.haber }} </td>
+        </tr>
+        {% endfor %}
+
+</table>
+</div>
+</main>
+
+{% endblock%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

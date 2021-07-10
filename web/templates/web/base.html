@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contabilidad</title>
+    <link rel="stylesheet" href="../../static/apicontab/css/style.css">
+    <script src="https://kit.fontawesome.com/5088044043.js" crossorigin="anonymous"></script>
+    <script defer src="../../static/apicontab/js/index.js"></script>
+    {% load static %}
+
+</head>
+<body>
+<header class="header">
+    <nav class="nav">
+        <a href="#" class="logo nav-link">Contabilidad</a>
+        <button class="nav-toggle" aria-label="Abrir menu">
+            <i class="fas fa-hamburger"></i>
+        </button>
+        <ul class="nav-menu nav-menu_visible">
+            <li class="nav-menu-item"><a href="{% url 'home' %}" class="nav-menu-link nav-link ">Inicio</a></li>
+            <li class="nav-menu-item"><a href="{% url 'librodiario' %}" class="nav-menu-link nav-link ">Libro Diario</a></li>
+            <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link ">Balance</a></li>
+            <li class="nav-menu-item"><a href="#" class="nav-menu-link nav-link ">Soporte</a></li>
+
+        </ul>
+    </nav>
+</header>
+  <div class="contenido_block">
+    {% block contenido %}
+    {% endblock %}
+
+  </div>
+</body>
+</html>

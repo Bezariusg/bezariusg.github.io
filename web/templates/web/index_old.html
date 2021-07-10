@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table style="width:50%">
+  <tr>
+      <th>ID</th>
+      <th>FECHA</th>
+      <th>ID CUENTA</th>
+      <th>CUENTA QUE INTERVIENE</th>
+      <th>DEBE</th>
+      <th>HABER</th>
+  </tr>
+
+
+
+
+
+        {% for obj in response %}
+        <TR>
+            <TD>{{ obj.id }}</TD>
+            <TD>{{ obj.fecha }}</TD>
+            <TD>{{ obj.id_transaccion }} </TD>
+            <TD>{{ obj.nombre_transaccion }} </TD>
+            <TD>{{ obj.debe }} </TD>
+            <TD>{{ obj.haber }} </TD>
+        </TR>
+        {% endfor %}
+
+</table>
+</html>
